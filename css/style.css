@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--content-font: 'Lato', sans-serif;
+
+	--lyrics-size: 1.25rem;
+
+	--wrapper-bg-color: rgb(253, 253, 253);
+	--body-bg-color: rgb(235, 235, 235);
+	--content-color: rgb(8, 8, 8);
+
+	--wrapper-padding: 0.25rem;
+	--wrapper-border-radius: 0.25rem;
+	--wrapper-margin: 0.25rem 2rem 1rem 2rem;
+	--wrapper-margin-auto: 0.25rem auto 1rem auto;
+}
+
+.wrapper {
+	padding: var(--wrapper-padding);
+	margin: var(--wrapper-margin);
+	border-radius: var(--wrapper-border-radius);
+	background-color: var(--wrapper-bg-color);
+	
+	-webkit-box-shadow: 3px 9px 13px -11px rgba(0,0,0,0.37); 
+	box-shadow: 3px 9px 13px -11px rgba(0,0,0,0.37);
+}
+
+body {
+	text-align: center;
+    color: var(--content-color);
+	height: 100vh;
+
+	font-family: 'Lato', sans-serif;
+	background-color: var(--body-bg-color);
+}
+
+body.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Header */
+
+div.body__header {
+	color: var(--content-color);
+	background-color: rgb(253, 253, 253);
+
+	/* margin: var(--wrapper-margin);
+	padding: var(--wrapper-padding);
+	border-radius: var(--wrapper-border-radius); */
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+img.header__img {
+	border: 2px solid #DAD5D5;
+	border-radius: 0.25rem;
+}
+
+span.header__dev-desc {
+	color: rgb(75, 75, 75);
+	font-size: 10px;
+}
+
+span.header__dev-desc > a {
+	color: inherit;
+}
+
+body.center > span.header__dev-desc {
+	align-self: center;
+}
+
+h1.header__title {
+	color: rgb(0, 0, 0);
+	margin-bottom: 0.1rem;
+}
+
+div.header__desc {
+	display: flex;
+	flex-flow: row wrap;
+
+	margin: 0 2rem;
+}
+
+section.direction-column {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+}
+
+section.full-width {
+	width: 100%;
+}
+
+ul.header__info {
+	list-style: none;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+ul.header__info > li > a {
+	color: var(--content-color)
+}
+
+ul.header__info > li > a::before {
+	content: "» ";
+}
+
+/* Instalar Minecraft */
+
+img.icon {
+	width: 1rem;
+}
+
+hr.spaced-hr {
+	margin: 0.35rem 0;
+}
+
+button.button {
+	padding: 0.15rem 1.35rem;
+	font-family: var(--content-font);
+	font-weight: 500;
+
+	border: 2px solid #DAD5D5;
+	border-radius: 0.25rem;
+}
+
+button.button:hover {
+	background-color: rgb(206, 206, 206);
+	border-color: rgb(206, 206, 206);
+	color: rgb(80, 80, 80);
+	transition: 100ms;
+}
+
+/* Música */
+
+iframe {
+	border-radius: var(--wrapper-border-radius);
+	margin: 1rem 0;
+}
+
+p.music-lyrics {
+	font-size: var(--lyrics-size);
+	text-align: left;
+	padding: 0 2rem;
+	margin-top: 1rem;
+}
+
+/* Media Querries */
+
+@media screen and (min-width: 600px) {
+	.wrapper {
+		width: 50vw;
+		margin: var(--wrapper-margin-auto);
+	
+	}
+
+	.header__desc {
+		margin-right: 5rem;
+	}
+}
